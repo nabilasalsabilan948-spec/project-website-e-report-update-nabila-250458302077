@@ -41,4 +41,14 @@ class UserController extends Controller
 
         return redirect()->back()->with('success', "Data Berhasil Ditambahkan !");
     }
+
+    public function updateUser() {
+        
+    }
+
+    public function deleteUser(Request $request) {
+        $user = User::findOrFail($request->id);
+        $user->delete();
+        return redirect()->back()->with('delete', "Data $request->nama Berhasil Dihapus");
+    }
 }

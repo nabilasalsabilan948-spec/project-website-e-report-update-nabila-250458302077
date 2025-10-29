@@ -42,6 +42,10 @@ Route::prefix('admin')->middleware(['auth', 'IniAdmin'])->group(function(){
 
     Route::controller(UserController::class)->group(function () {
         Route::get('/user', 'indexUser')->name('user.admin');
+        // create biasanya buat form, kalau store buat logic create nya
         Route::post('/user-create', 'createUser')->name('user.create');
+        // edit biasanya buat form, kalau update buat logic update nya
+        Route::put('/user-update', 'updateUser')->name('user.update');
+        Route::delete('/user-delete', 'deleteUser')->name('user.delete');
     });
 });

@@ -78,7 +78,8 @@
                                     <td>
                                         <a href="" class="btn btn-outline-success"><i class="fa-solid fa-eye"></i></a>
                                         <a href="" class="btn btn-outline-secondary"><i class="fa-solid fa-pencil"></i></a>
-                                        <a href="" class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i></a>
+                                        <a href="" class="btn btn-outline-danger" data-toggle="modal" data-target="#delete{{ $row->id }}"><i class="fa-solid fa-trash"></i></a>
+                                        @include('Admin.dataUser.modalDelete')
                                     </td>
                                 </tr>
                                 @endforeach
